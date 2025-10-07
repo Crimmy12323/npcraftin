@@ -1,27 +1,41 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+# Node.js dependencies
+/node_modules/
 
-# next.js
+# Next.js build output
 /.next/
 /out/
 
-# production
+# Production build output
 /build
 
-# debug
+# Debug log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
+# Env files (ensure sensitive keys are not committed)
 .env*
+*.env.local
+*.env.production
+*.env.development
 
-# vercel
-.vercel
+# Vercel deployment files
+.vercel/
 
-# typescript
+# TypeScript build info
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore log files
+*.log
+
+# Ignore local IDE configurations (e.g. VS Code)
+.vscode/
+
+# Ignore dependency lock files (if you are using pnpm, yarn, or npm)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
